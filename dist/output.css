@@ -1557,4 +1557,54 @@ body{
   }
 }
 
+@media (min-width: 1536px) {
+  .\32xl\:right-52 {
+    right: 13rem;
+  }
+
+  .\32xl\:right-full {
+    right: 100%;
+  }
+
+  .\32xl\:right-auto {
+    right: auto;
+  }
+
+  .\32xl\:left-auto {
+    left: auto;
+  }
+
+  .\32xl\:right-px {
+    right: 1px;
+  }
+
+  .\32xl\:right-3\/4 {
+    right: 75%;
+  }
+
+  .\32xl\:right-1\/2 {
+    right: 50%;
+  }
+
+  .\32xl\:right-1\/4 {
+    right: 25%;
+  }
+
+  .\32xl\:-right-1\/4 {
+    right: -25%;
+  }
+
+  .\32xl\:-right-2\/4 {
+    right: -50%;
+  }
+
+  .\32xl\:right-2\/4 {
+    right: 50%;
+  }
+
+  .\32xl\:-right-3\/4 {
+    right: -75%;
+  }
+}
+
 
