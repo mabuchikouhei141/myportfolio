@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+<!-- グーグルフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- fontawesome -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/80eae48cab.js" crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- anime.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <title>ポートフォリオサイト</title>
+    
+</head>
+<body class="font-poppins bg-body text-white relative z-10 no-scroll">
+    <ul class="menuItem">
+        <li class="mb-2"><a href="#home">ホーム</a></li>
+        <li class="mb-2"><a href="#about">自己紹介</a></li>
+        <li class="mb-2"><a href="#portfolio">ポートフォリオ</a></li>
+        <li class="mb-2"><a href="#skills">スキル一覧</a></li>
+        <li class="mb-10"><a href="#resource">学習リソース</a></li>
+        <li class="mb-10"><a href="#resume">経歴</a></li>
+        <button class="text-sm md:text-3xl py-2 md:py-5 bg-theme font-extrabold rounded-lg hover:bg-purple-600 transition-all duration-300"><a href="#contact" class="m-8">お問い合わせ</a></button>
+    </ul>
+    
+            
+    <!-- ナビゲーション -->
+    <header class="py-6">
+    <div class="container mx-auto flex justify-between items-center px-8 md:px-14 lg:px-24 w-full">
+        <div class="text-xl font-extrabold">MabCode.com</div>
+        <div class="menuToggle relative">
+            <!-- ハンバーガーアイコン -->
+            <i class="fa-solid fa-bars absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"></i>
+            
+            <!-- クローズアイコン -->
+            <i class="fa-solid fa-xmark-large absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 invisible"></i>
+        </div>
+        
+        <div class="space-x-10 hidden lg:flex items-center">
+            <a href="#home" class="hover:text-selected-text transition-all duration-300">ホーム</a>
+            <a href="#about" class="hover:text-selected-text transition-all duration-300">自己紹介</a>
+            <a href="#portfolio" class="hover:text-selected-text transition-all duration-300">ポートフォリオ</a>
+            <a href="#skills" class="hover:text-selected-text transition-all duration-300">スキル一覧</a>
+            <a href="#resource" class="hover:text-selected-text transition-all duration-300">学習リソース</a>
+            <a href="#resume" class="hover:text-selected-text transition-all duration-300">経歴</a>
+            <a href="#contact"><button class="px-6 py-2 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300">お問い合わせ</button></a>
+        </div>
+        
+        
+    </div>
+    </header>
+    <!-- FV -->
+    <div class="content parallax-container">
+    <div id="home" class="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <div class="flex flex-wrap md:flex-nowrap">
+            <div class="md:my-36 lg:ml-20 justify-center md:justify-start  max-w-xl flex flex-wrap">
+                <h1 class="font-extrabold text-2xl text-center md:text-left lg:text-6xl ml-14 md:ml-0 md:text-4xl lg:leading-relaxed"><span class="gradation rounded-lg">AI技術</span>を活用して<br><br class="lg:hidden">美しいWEBサイトを<br><br class="lg:hidden">構築します</h1>
+                <a href="#about">
+                    <button  id="contentToHide" class="px-6 py-4 mt-10 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300 lg:block hidden">
+                        <i class="fa-solid fa-rocket-launch" style="color: #ffffff;"></i>
+                        <span>もっと見る</span>
+                    </button>
+                </a>
+            </div>
+            <img src="../img/fv.png" alt="image" class="md:absolute lg:top-20 lg:right-52 md:w-2/4 w-5/6 mt-12 md:mt-0 right-6 - mx-auto -z-10 lg:w-1/3 0.">
+        </div>
+    </div>
+</div>
+
+<!-- 自己紹介 -->
+<div id="about" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
+    <section class="w-full">
+        <h2 class="secondary-title"><i class="fa-regular fa-image-portrait pr-2"></i>自己紹介</h2>
+        <p class="section-paragraph">トラックドライバーからWEB専門家へ</p>
+        <div class="my-16">
+            <div class="border border-purple-300 hover:border-custom-color transition-all duration-300 p-16 lg:px-32 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32">
+                <div class="mb-6 lg:mb-0 self-center">
+                    <div class="hologram">
+                        <img src="https://picsum.photos/200/200" alt="間渕航平の写真" class="hologram-image rounded-full">
+                    </div>
+                </div>
+                <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
+                    <h3 class="text-3xl font-semibold mb-6">間渕航平</h3>
+                    <div class="tags flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mb-6">
+                        <div class="badge">WEBデザイナー</div>
+                    </div>
+                    <p class="text-secondary"><b>AIを駆使し、クリエイティブを最適化します。</b><span class="hidden lg:block"><br><b>chatGPT</b>と<b>SDXL</b>を使い倒してます。<br><br><b>保有資格</b><br>・中型免許<br>・運行管理者(貨物)<br>・WEBデザイナー検定 エキスパート</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</div>
+<!-- ポートフォリオ -->
+<div id="portfolio" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
+    <section class="w-full">
+        <h2 class="secondary-title" id="portfolio-title"><i class="fa-regular fa-browser pr-2"></i>ポートフォリオ</h2>
+        <div class="portfolio-animation">
+
+        <p class="section-paragraph">私がつくったWEBサイトはこちらです</p>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 my-16">
+            <div class="hover-item cursor-pointer relative">
+            <a href="../udemy/memo-app-vanillajs-promaster-main/index.html" target="_blank" rel="noopener noreferrer">
+                <span class="hover-text">テキスト1<i class="fa-light fa-up-right pl-1"></i></span>
+                <img src="https://picsum.photos/600/600" alt="" class="w-full h-64 lg:h-72 object-cover rounded-md item-image">
+            </a>
+        </div>
+        <div class="hover-item cursor-pointer relative">
+            <a href="../udemy/three-project/threejs-udemy/index.html" class="cursor-pointer hover-item" target="_blank" rel="noopener noreferrer">
+                <span class="hover-text">テキスト2<i class="fa-light fa-up-right pl-1"></i></span>
+                <img src="../img/earth.png" alt="" class="w-full h-64 lg:h-72 object-cover rounded-md item-image">
+            </a>
+        </div>
+        <div class="hover-item cursor-pointer relative">
+            <a href="https://sample-sns-front-git-main-mabuchikouhei141.vercel.app/" class="cursor-pointer hover-item" target="_blank" rel="noopener noreferrer">
+                <span class="hover-text">テキスト3<i class="fa-light fa-up-right pl-1"></i></span>
+                <img src="../img/realsns.png" alt="" class="w-full h-64 lg:h-72 object-cover rounded-md item-image">
+            </a>
+        </div>
+        <div class="hover-item cursor-pointer relative">
+            <a href="" class="cursor-pointer hover-item" target="_blank" rel="noopener noreferrer">
+                <span class="hover-text">テキスト4<i class="fa-light fa-up-right pl-1"></i></span>
+                <img src="../img/1.jpeg" alt="" class="w-full h-64 lg:h-72 object-cover rounded-md item-image">
+            </a>
+        </div>
+        <div class="hover-item cursor-pointer relative">
+            <a href="https://nextjs-blog-jyz3o91e5-mabuchikouhei141.vercel.app/" class="cursor-pointer hover-item" target="_blank" rel="noopener noreferrer">
+                <span class="hover-text">テキスト5<i class="fa-light fa-up-right pl-1"></i></span>
+                <img src="../img/profile.jpeg" alt="" class="w-full h-64 lg:h-72 object-cover rounded-md item-image">
+            </a>
+        </div>
+        <div class="hover-item cursor-pointer relative">
+            <a href="" class="cursor-pointer hover-item" target="_blank" rel="noopener noreferrer">
+                <span class="hover-text">テキスト6<i class="fa-light fa-up-right pl-1"></i></span>
+                <img src="https://picsum.photos/600/600" alt="" class="w-full h-64 lg:h-72 object-cover rounded-md item-image">
+            </a>
+        </div>
+        </div>
+        
+    </div>
+    </section>
+</div>
+<!-- スキル一覧 -->
+
+<div id="skills" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
+    <section class="w-full">
+        <h2 class="secondary-title"><i class="fa-regular fa-cubes pr-2"></i>スキルスタック</h2>
+        <p class="section-paragraph">私は以下の言語を取り扱ってきました。</p>
+
+        <div class="my-16">
+            <div class="w-full border border-purple-300 p-16 lg:px-32 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-orange-300 transition-all duration-300 cursor-auto">
+            <!-- 言語のロゴ -->
+            <div class="mb-6 lg:mb-0 self-center">
+                <i class="fa-brands fa-html5 text-9xl text-orange-400"></i>
+            </div>
+            <!-- スキルの説明 -->
+            <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
+                <h3 class="text-3xl
+                 font-semibold mb-6">HTML5</h3>
+                <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mb-6">
+                    <div class="badge">Frontend</div>
+                <div class="badge">Form</div></div>
+                <p class="text-secondary">数多くのWEBサイトを手掛けてきました.</p>
+            </div>
+                
+        </div>
+        </div>
+        <div class="my-16">
+            <div class="w-full border border-purple-300 p-16 lg:px-32 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-blue-600 transition-all duration-300 cursor-auto">
+            <!-- 言語のロゴ -->
+            <div class="mb-6 lg:mb-0 self-center">
+                <i class="fa-brands fa-css3-alt text-9xl text-blue-300"></i>
+            </div>
+            <!-- スキルの説明 -->
+            <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
+                <h3 class="text-3xl
+            font-semibold mb-6">CSS3</h3>
+                <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mb-6">
+                    <div class="badge">Bootstrap</div>
+                    <div class="badge">Tailwindcss</div></div>
+                <p class="text-secondary">フレームワークを活用してレスポンシブサイトを構築します</p>
+            </div>
+        </div>
+        </div>
+    <div class="my-16">
+        <div class="w-full border border-purple-300 p-16 lg:px-32 lg:py-20 flex justify-center lg:justify-start flex-wrap lg:space-x-32 hover:border-yellow-300 transition-all duration-300 cursor-auto">
+        <!-- 言語のロゴ -->
+        <div class="mb-6 lg:mb-0 self-center">
+            <i class="fa-brands fa-square-js text-9xl text-yellow-300"></i>
+        </div>
+        <!-- スキルの説明 -->
+        <div class="text-center flex flex-wrap justify-center lg:text-left lg:block">
+            <h3 class="text-3xl
+             font-semibold mb-6">javascript</h3>
+            <div class="flex flex-wrap w-full justify-center gap-3 lg:w-auto lg:justify-start mb-6">
+                <div class="badge">Next.js</div>
+            <div class="badge">React</div></div>
+            <p class="text-secondary">node.jsでフルスタック開発の経験あり</p>
+        </div>
+            
+    </div>
+    </div>
+    
+    </section>
+</div>
+
+<!-- 学習リソース -->
+<div id="resource" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 md:mt-64 w-full">
+    <section class="w-full">
+        <h2 class="secondary-title"><i class="fa-regular fa-head-side-gear pr-2"></i>学習リソース</h2>
+        <p class="section-paragraph">学習してきたツールやフレームワーク、ライブラリについて</p>
+        <div class="slick" id="left-carousel">
+            <div class="slide"><a href="https://threejs.org/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Three.js</div>
+                <img src="../img/three.js.jpeg" class="sm:w-3" alt="Truck driver turned web designer">
+            </a>
+            </div>
+            <div class="slide"><a href="https://nextjs.org/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Next.js<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/nextjs.jpeg" alt="Marketing school graduate">
+            </a>
+            </div>
+            <div class="slide"><a href="https://ja.legacy.reactjs.org/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">React<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/react.jpeg" alt="Now at a renowned web advertising agency">
+            </a>
+            </div>
+            <div class="slide"><a href="https://www.npmjs.com/package/timeago.js/v/4.0.0-beta.3" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Timeago.js<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/timeagojs.jpeg" alt="Harnessing AI for efficient creativity">
+            </a>
+            </div>
+            <div class="slide"><a href="https://jquery.com" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">jQuery<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/jQuery.jpeg" alt="Harnessing AI for efficient creativity">
+            </a>
+            </div>
+            <div class="slide"><a href="https://www.adobe.com/jp/products/aftereffects.html?gclid=Cj0KCQjwoeemBhCfARIsADR2QCsxDavClvdVnu9wGZrqMi2L-a59vd-iqlMmj4oKmijxPLB3WuVlKjcaAm-sEALw_wcB&sdid=19SCDRPS&mv=search&ef_id=Cj0KCQjwoeemBhCfARIsADR2QCsxDavClvdVnu9wGZrqMi2L-a59vd-iqlMmj4oKmijxPLB3WuVlKjcaAm-sEALw_wcB:G:s&s_kwcid=AL!3085!3!476004361849!b!!g!!%E3%82%A2%E3%83%95%E3%82%BF%E3%83%BC%E3%82%A8%E3%83%95%E3%82%A7%E3%82%AF%E3%83%88%20%E6%9C%88%E9%A1%8D!10262614705!103787601113&gad=1" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">After effects<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="https://picsum.photos/300/200?random=1" alt="Harnessing AI for efficient creativity">
+            </a>
+            </div>
+            <div class="slide"><a href="https://xdtrail.com/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">XD<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="https://picsum.photos/300/200?random=2" alt="Harnessing AI for efficient creativity">
+            </a>
+            </div>
+            <div class="slide"><a href="https://apps.apple.com/jp/app/procreate/id425073498" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Procreate<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/procreate.jpeg" alt="Harnessing AI for efficient creativity">
+            </a>
+            </div>
+        </div>
+        
+        
+        <div class="slick" id="right-carousel">
+            <div class="slide"><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Tailwindcss<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/tailwind.jpeg" alt="Recruitment for the future"></a>
+            </div>
+            <div class="slide"><a href="https://getbootstrap.jp/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Bootstrap<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/bootstrap.jpeg" alt="Seeking the best talent"></a>
+            </div>
+            <div class="slide"><a href="https://recooord.org/loading-animation/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Loading.css<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/loading.jpeg" alt="For a prosperous digital future"></a>
+            </div>
+            <div class="slide"><a href="https://animate.style/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Animete.css<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="https://picsum.photos/300/200?random=6" alt="Join our journey"></a>
+            </div>
+            <div class="slide"><a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Fontawesome<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="https://picsum.photos/300/200?random=7" alt="Join our journey"></a>
+            </div>
+            <div class="slide"><a href="https://www.adobe.com/jp/products/photoshop.html?gclid=Cj0KCQjwoeemBhCfARIsADR2QCvlZ269kViQE-IxCUD52YdEDW2gSNl9KK8Hj68KbPp7MCLrFQrOSTcaAuN3EALw_wcB&sdid=B4XQ3XK7&mv=search&ef_id=Cj0KCQjwoeemBhCfARIsADR2QCvlZ269kViQE-IxCUD52YdEDW2gSNl9KK8Hj68KbPp7MCLrFQrOSTcaAuN3EALw_wcB:G:s&s_kwcid=AL!3085!3!476007603042!e!!g!!photoshop!739872194!102573496014&gad=1" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Photoshop<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/photoshop.jpeg" alt="Join our journey"></a>
+            </div>
+            <div class="slide"><a href="https://www.adobe.com/jp/products/illustrator.html?gclid=Cj0KCQjwoeemBhCfARIsADR2QCtWvWDCrox7f9_AxXLmc8HY7AmsEd1_gMVruMWjHJGF-jJvmEVbk3QaAnguEALw_wcB&sdid=CD922P6Y&mv=search&ef_id=Cj0KCQjwoeemBhCfARIsADR2QCtWvWDCrox7f9_AxXLmc8HY7AmsEd1_gMVruMWjHJGF-jJvmEVbk3QaAnguEALw_wcB%3AG%3As&s_kwcid=AL%213085%213%21642111400068%21e%21%21g%21%21%E3%82%A2%E3%83%89%E3%83%93+%E3%82%A4%E3%83%A9%E3%83%AC%21739750006%21102800967305&gad=1" target="_blank" rel="noopener noreferrer">
+                <div class="hover-text">Illustrator<i class="fa-light fa-up-right pl-1"></i></div>
+                <img src="../img/Illustrator.jpeg" alt="Join our journey"></a>
+            </div>
+        </div>
+    </section>
+</div>
+<!-- 経歴 -->
+<div id="resume" class="container mt-28 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 lg:mt-80 w-full">
+    <section class="w-full">
+        <h2 class="secondary-title" id="resume-title"><i class="fa-regular fa-file pr-2"></i>経歴</h2>
+        <p class="section-paragraph">生い立ちやどのような仕事をしてきたかについて</p>
+        <div class=" grid grid-cols-1 lg:gap-y-56 gap-y-64 mb-52">
+            <div class="timeline my-5 text-sm md:text-lg lg:text-xl">
+                <div class="event hover:text-selected-text transition-all duration-300" data-year="1993">1993年: 誕生</div>
+                <div class="popup">静岡県浜松市で生まれました。幼少期は静かな子供で、友達はあまり多い方ではありませんでした。自然と１人で過ごす時間が多く<i class="fa-sharp fa-solid fa-book-open-reader fa-beat pr-1"></i>読書が好きでした。今でも根本の性格はあまり変わっていないと思いますが社会生活を営む上で大事なものはある程度身につけてきたつもりであります。</div>
+            </div>
+            <div class="timeline my-5 text-sm md:text-lg lg:text-xl">
+                <div class="event hover:text-selected-text transition-all duration-300" data-year="2011">2011年: 高等学校卒業</div>
+                <div class="popup">静岡県立浜松江之島高等学校の特進科を卒業しました。<i class="fa-regular fa-futbol fa-spin pr-2 fa-2xs"></i><i class="fa-regular fa-goal-net pr-1"></i>部活はサッカー部でポジションはサイドバックでした。攻守に絡みながら全体を見渡して指示が出せるポジションのため、俯瞰で全体像を見渡す癖がつきました。文化祭では当時の趣味だったギターを生かしてバンド演奏をしました。</div>
+            </div>
+            <div class="timeline my-5 text-sm md:text-lg lg:text-xl">
+                <div class="event hover:text-selected-text transition-all duration-300" data-year="2011">2012年: 株式会社アンリミテット</div>
+                <div class="popup">初めての仕事として株式会社アンリミテットに入社しました。営業部門で飛び込み営業や<i class="fa-regular fa-mobile fa-shake p-1"></i>某携帯ショップへの派遣業務を経験しました。顧客に対するアプローチを学びました。今では少し肩の力が抜けましたが当時はバリバリの営業マンでした。しかしながら2012年に倒産しました。</div>
+            </div>
+            <div class="timeline my-5 text-sm md:text-lg lg:text-xl">
+                <div class="event hover:text-selected-text transition-all duration-300" data-year="2013"><a href="https://www.jetsystem.co.jp/" target="_blank" rel="noopener noreferrer">2013年: 株式会社ジェットシステム<i class="fa-light fa-up-right pl-1"></i></i></a></div>
+                <div class="popup">新しいチャレンジとして株式会社ジェットシステムに転職しました。某家電量販店の技術スタッフとして勤務しました。と応じの営業経験を活かして当時19歳にして3店舗を管理する<i class="fa-solid fa-people-roof fa-bounce p-1"></i>リーダー職を経験しました。仕事でPCに触れる機会が増えてこの頃から<i class="fa-regular fa-computer-classic p-1"></i>プログラミングに興味を持ち始めました。</div>
+            </div>
+            <div class="timeline my-5 text-sm md:text-lg lg:text-xl">
+                <div class="event hover:text-selected-text transition-all duration-300" data-year="2015"><a href="https://www.sagawa-exp.co.jp/" target="_blank" rel="noopener noreferrer">2015年: 株式会社佐川急便<i class="fa-light fa-up-right pl-1"></i></a></div>
+                <div class="popup">物流業界に興味を持ち、株式会社佐川急便に入社しました。<i class="fa-regular fa-virus-covid fa-beat-fade pr-1"></i>コロナ禍で需要が劇的に増えた中で激務を経験しました。長時間労度を７年間続けやり切る精神や気持ちのタフさが身につきました。業務外で国家資格の運行管理者資格（貨物）を取得しました。どんなに疲れていても必ず勉強の時間を確保する習慣をつけました。</div>
+            </div>
+            <div class="timeline my-5 text-sm md:text-lg lg:text-xl">
+                <div class="event hover:text-selected-text transition-all duration-300" data-year="2023"><a href="https://t.canal.bz/" target="_blank" rel="noopener noreferrer">2023年: 株式会社キャナル<i class="fa-light fa-up-right pl-1"></i></a></div>
+                <div class="popup"><i class="fa-brands fa-adversal fa-bounce pr-1"></i>WEB広告に特化した広告代理店にてデザイナーとして勤務しています。常に最新情報を得るために媒体のリサーチを心がけました。そこで得た情報をもとにクライアントに対してバナーやLPをデザイン提案からコーディング、データ分析、改修まで一括して行っていました。業務外でWEBデザイン検定エキスパートを取得しました。現在はフルスタックエンジニアを目指して勉強の日々を送っています。</div>
+            </div>
+        </div>
+</section>
+</div>
+<!-- お問い合わせ -->
+<div id="contact" class="container mt-64 mb-64 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
+    <section class="w-full">
+        <h2 class="secondary-title"><i class="fa-regular fa-envelope pr-2"></i>お問い合わせ</h2>
+        <p class="section-paragraph">より詳しい経歴や制作物についてはこちらからお問い合わせください。</p>
+    <div class="w-full grid lg:grid-cols-2 gap-8 lg:gap-x-48 mt-16">
+        <form action="https://formspree.io/f/xjvqyayl"
+        method="POST" id="contactForm" class="space-y-12" class="space-y-12">
+            <div>
+                <label for="name" class="text-white block mb-6 text-xl font-bold">お名前</label>
+                <input type="text" id="name" name="name" class="w-full border border-InputBorder bg-input px-4 py-4">
+            </div>
+            <div>
+                <label for="email" class="text-white block mb-6 text-xl font-bold">メールアドレス</label>
+                <input type="email" id="email" name="email" class="w-full border border-InputBorder bg-input px-4 py-4">
+            </div>
+            <div>
+                <label for="message" class="text-white block mb-6 text-xl font-bold">メッセージ</label>
+                <textarea id="message" name="message" class="w-full border border-InputBorder bg-input px-4 py-4"></textarea>
+            </div>
+            <button class="px-8 py-3 bg-theme font-bold rounded-lg hover:bg-purple-600 transition-all duration-300">送信する<i class="fa-light fa-up-right pl-1"></i></button>
+    </form>
+    <div class="mt-20">
+        <a href="tel:08015634769" class="text-secondary">080-1563-4769<i class="fa-light fa-up-right pl-1"></i></a><br>
+        <a href="mailto:kohei596423@gmail.com">kohei596423@gmail.com<i class="fa-light fa-up-right pl-1"></i></a>
+        <!-- SNS -->
+        <div class="mt-20 grid  grid-cols-4 gap-y-10 items-start justify-start flex-wrap">
+            <a href="#" aria-label="Twitter Link"  target="_blank" rel="noopener noreferrer"><i class="fa-brands text-3xl fa-square-x-twitter" style="color: #ffffff;"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100095305885470" aria-label="Facebook Link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook text-3xl text-blue-400"></i></a>
+            <a href="#" aria-label="Instagram Link" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram text-3xl text-pink-400"></i></a>
+            <a href="#" aria-label="Github Link"  target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github text-3xl" style="color: #ffffff;"></i></a>
+            <a href="https://www.linkedin.com/in/%E8%88%AA%E5%B9%B3-%E9%96%93%E6%B8%95-804087288/" target="_blank" rel="noopener noreferrer" aria-label="linkedin Link"><i class="fa-brands fa-linkedin text-3xl" style="color: #0b65c2;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="pinterest Link"><i class="fa-brands fa-square-pinterest text-3xl" style="color: #b91d25;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="threads Link"><i class="fa-brands fa-threads text-3xl" style="color: #ffffff;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="line Link"><i class="fa-brands fa-line text-3xl" style="color: #06c755;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="youtube Link"><i class="fa-brands fa-youtube text-3xl" style="color: #fc0310;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="tiktok Link"><i class="fa-brands fa-tiktok text-3xl" style="color: #ffffff;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="soundxloud Link"><i class="fa-brands fa-soundcloud text-3xl" style="color: #ff5501;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="snapchat Link"><i class="fa-brands fa-snapchat text-3xl" style="color: #ffffff;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="skype Link"><i class="fa-brands fa-skype text-3xl" style="color: #0393d1;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="discord Link"><i class="fa-brands fa-discord text-3xl" style="color: #4e61f0;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="slack Link"><i class="fa-brands fa-slack text-3xl" style="color: #e7a722;"></i></a>
+            <a href="https://www.pinterest.jp/mabuchicanal/" target="_blank" rel="noopener noreferrer" aria-label="dailymotion Link"><i class="fa-brands fa-dailymotion text-3xl" style="color: #ffffff;"></i></a>
+            
+        </div>
+    </div>
+    </div>
+</section>
+</div>
+</div>
+<script>
+//ハンバーガーメニュー
+const page = document.querySelector(".content");
+const body = document.querySelector(".no-scroll");
+const menuToggle = document.querySelector(".menuToggle");
+const menuItem = document.querySelector(".menuItem");
+const barIcon = menuToggle.querySelector(".fa-bars");
+const closeIcon = menuToggle.querySelector(".fa-xmark-large");
+
+function toggleMenu() {
+    body.classList.toggle("overflow-hidden");
+    menuItem.classList.toggle("transX");
+    barIcon.classList.toggle("invisible");
+    closeIcon.classList.toggle("invisible");
+}
+
+menuToggle.addEventListener("click", toggleMenu);
+menuItem.addEventListener("click", toggleMenu);
+
+//プロフィール
+const hologram = document.querySelector('.hologram');
+const img = document.querySelector('.hologram-image');
+
+hologram.addEventListener('mousemove', (e) => {
+    const rect = hologram.getBoundingClientRect();
+    const relX = e.clientX - rect.left;
+    const relY = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const percentX = (relX - centerX) / centerX;
+    const percentY = -(relY - centerY) / centerY;
+    const rotateY = 15 * percentX;
+    const rotateX = 15 * percentY;
+
+    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+hologram.addEventListener('mouseleave', () => {
+    img.style.transform = 'rotateX(0deg) rotateY(0deg)';
+});
+//年表
+
+//スライドアニメーション
+$(document).ready(function(){
+    $('#left-carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3,
+        arrows: false,
+        cssEase: 'linear',
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 3000,
+        infinite: true
+    });
+
+    $('#right-carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3,
+        arrows: false,
+        cssEase: 'linear',
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 3000,
+        infinite: true,
+    });
+});
+
+
+
+
+
+
+//お問い合わせ
+    function isValidEmail(email) {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(email);
+}
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Eメールアドレスのバリデーションチェック
+    if (!isValidEmail(email)) {
+        alert("正しいEメールアドレスを入力してください。");
+        return;
+    }
+
+    // 最初の確認
+    const firstConfirmation = confirm(`以下の内容で送信しますか？\n\nお名前: ${name}\nメールアドレス: ${email}\nメッセージ: ${message}`);
+
+    if (firstConfirmation) {
+        // 二度目の確認
+        const secondConfirmation = confirm("本当に送信してよろしいですか？");
+        if (secondConfirmation) {
+            event.target.submit();
+        } else {
+            alert("送信がキャンセルされました。");
+        }
+    } else {
+        alert("送信がキャンセルされました。");
+    }
+});
+
+
+
+
+
+
+</script>
+</body>
+</html>

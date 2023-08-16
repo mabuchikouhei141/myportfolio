@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body{
+    scroll-behavior: smooth;
+}
+
+
+.secondary-title{
+    @apply text-3xl font-bold;
+}
+
+.secondary-title::before{
+    content: "";
+    @apply block w-12 h-2 bg-theme rounded-full mb-1;
+}
+.section-paragraph{
+    @apply text-secondary my-6 w-full max-w-3xl;
+}
+
+.badge{
+    @apply px-4 py-2 text-sm bg-badge rounded-sm;
+}
+
+.content {
+    transform-origin: top left;
+}
+
+/* ハンバーガーボタン */
+.menuToggle {
+    @apply lg:hidden text-base flex justify-center items-center z-10 w-10 h-10 bg-theme hover:bg-selected-text transition-all duration-300 rounded-full;
+}
+
+.menuItem {
+    @apply fixed space-y-16 md:space-y-24 list-none translate-x-[-120%] shadow-xl  p-10 w-2/3 h-full text-sm md:text-3xl hover:text-selected-text pl-10  transition-all duration-300 z-50;
+    transition: all 0.6s cubic-bezier(1,-0.19,0,1.09);
+    background-color: #262626ec;
+}
+
+.menuItem li {
+    @apply transform transition-transform duration-500;
+}
+
+.menuItem li:hover {
+    @apply scale-105;
+}
+
+.transX {
+    transform: translateX(-25px);
+}
+
+
+
+  /*グラデーション  */
+  .gradation{
+    line-height: 0;
+    background: #59C173;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+
+/* ホログラムアイコン */
+  .hologram {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+
+.hologram-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: brightness(70%) contrast(130%);
+    will-change: transform;
+}
+
+
+.hologram:hover .hologram-image {
+    filter: brightness(100%) contrast(100%);
+    border: solid 1px green;
+}
+
+/* 年表CSS */
+.timeline {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+}
+ 
+.event {
+    position: relative; 
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.popup {
+    position: absolute;
+    top: 130%;  
+    line-height: 1.8;
+    letter-spacing: 1px;
+    background-color: #3F3F51;
+    padding: 20px;
+    width: 100%; 
+    border-radius: 10px;
+}
+
+
+
+/* ポートフォリオ画像のホバーアニメーション */
+
+.hover-item img {
+    @apply transition-all duration-300;
+}
+
+.hover-item:hover img {
+    filter: blur(5px);
+}
+
+.hover-text {
+    @apply absolute z-10 left-0 bottom-0 w-full bg-gradient-to-r from-[#b8d8ff] via-[#a3fffd] to-[#f496bf] text-transparent font-bold pl-8 pb-6 text-xl text-left transform translate-y-7 opacity-0 duration-300;
+    -webkit-background-clip: text;
+    pointer-events: none;
+}
+
+.hover-item:hover .hover-text {
+    @apply transform-none opacity-100;
+}
+
+/* レスポンシブブレークポイント: 1024px以下 (タブレットとスマホ) */
+@media (max-width: 1024px) {
+    .hover-item img {
+        @apply filter-none;
+    }
+
+    .hover-text {
+        @apply transform-none opacity-100 text-xs; /* テキストを常に表示 */
+        background-color: rgba(0, 0, 0, 0.5); /* テキストの背景に少し黒を追加して読みやすくする */
+    }
+}
+
+
+/*カルーセル*/
+/* 通常のスタイル */
+
+.slick {
+    @apply w-full mx-auto overflow-hidden rounded-xl;
+    perspective: 1500px;
+}
+
+.slick .slide {
+    @apply relative;
+}
+
+.slick img {
+    @apply w-[600px] h-[300px] object-cover transition-all duration-300;
+}
+
+.slick img:hover {
+    filter: blur(5px);
+}
+
+.slick .hover-text {
+    @apply absolute z-10 w-full bottom-0 bg-gradient-to-r from-[#b8d8ff] via-[#a3fffd] to-[#f496bf] text-transparent font-bold p-5 text-xl text-left transform translate-y-full opacity-0 duration-300 shadow-2xl border-black;
+    -webkit-background-clip: text;
+    pointer-events: none;
+}
+
+.slick .slide:hover .hover-text {
+    @apply transform-none opacity-100;
+}
+
+#left-carousel, #right-carousel {
+    @apply bg-black;
+}
+
+/* レスポンシブブレークポイント */
+@media (max-width: 820px) {
+    .slick img {
+        @apply w-[300px] h-[200px];
+    }
+
+    .slick .hover-text {
+        @apply text-sm p-3 opacity-100 transform-none;
+    }
+}
+
+

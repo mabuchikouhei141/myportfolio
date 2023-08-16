@@ -1,0 +1,26 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "animejs": "^3.2.1",
+    "bash": "^0.0.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "node": "^20.5.0",
+    "nodemailer": "^6.9.4",
+    "php": "^1.0.2",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
