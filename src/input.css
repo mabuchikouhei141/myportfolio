@@ -30,7 +30,7 @@ body{
 
 /* ハンバーガーボタン */
 .menuToggle {
-    @apply lg:hidden text-base flex justify-center items-center z-10 w-10 h-10 bg-theme hover:bg-selected-text transition-all duration-300 rounded-full;
+    @apply xl:hidden text-base flex justify-center items-center z-10 w-10 h-10 bg-theme hover:bg-selected-text transition-all duration-300 rounded-full;
 }
 
 .menuItem {
