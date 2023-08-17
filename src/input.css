@@ -34,7 +34,7 @@ body{
 }
 
 .menuItem {
-    @apply fixed space-y-16 md:space-y-24 lg:space-y-10 list-none translate-x-[-120%] shadow-xl p-3 w-2/3 h-full text-sm md:text-3xl lg:text-xl hover:text-selected-text pl-10  transition-all duration-300 z-50;
+    @apply fixed space-y-16 md:space-y-24 lg:space-y-10 list-none translate-x-[-120%] shadow-xl p-10 w-2/3 h-full text-sm md:text-3xl lg:text-xl hover:text-selected-text pl-10  transition-all duration-300 z-50;
     transition: all 0.6s cubic-bezier(1,-0.19,0,1.09);
     background-color: #262626ec;
 }
@@ -139,7 +139,7 @@ body{
 }
 
 /* レスポンシブブレークポイント: 1024px以下 (タブレットとスマホ) */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
     .hover-item img {
         @apply filter-none;
     }
@@ -186,7 +186,7 @@ body{
 }
 
 /* レスポンシブブレークポイント */
-@media (max-width: 820px) {
+@media (max-width: 1280px) {
     .slick img {
         @apply w-[300px] h-[200px];
     }
@@ -195,5 +195,4 @@ body{
         @apply text-sm p-3 opacity-100 transform-none;
     }
 }
-
 
