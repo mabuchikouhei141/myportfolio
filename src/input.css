@@ -7,6 +7,34 @@ body{
     scroll-behavior: smooth;
 }
 
+.logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #7e7d7d;
+    position: relative;
+    display: inline-flex; /* フレックスボックスを使用して要素を配置 */
+    align-items: center;  /* アイテムを中央に配置 */
+    padding: 5px 15px;
+    border: 1px solid #e0e0e0; /* 薄いボーダー */
+    border-radius: 5px;
+    background-color: transparent; /* 背景を透明に */
+  }
+  
+  .logo span.ai {
+    color: #2ecc71; /* 現代的な青緑の色 */
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 5px; /* アイコンとの間隔調整 */
+  }
+  
+  .logo::before {
+    content: '\25CF'; /* ニューロンを象徴するドット */
+    color: #2ecc71; /* ドットの色 */
+    font-size: 12px; 
+    margin-right: 5px; /* テキストとの間隔調整 */
+  }
+  
+
 
 .secondary-title{
     @apply text-3xl font-bold;
@@ -24,17 +52,13 @@ body{
     @apply px-4 py-2 text-sm bg-badge rounded-sm;
 }
 
-.content {
-    transform-origin: top left;
-}
-
 /* ハンバーガーボタン */
 .menuToggle {
-    @apply xl:hidden text-base flex justify-center items-center z-10 w-10 h-10 bg-theme hover:bg-selected-text transition-all duration-300 rounded-full;
+    @apply xl:hidden text-base flex justify-center items-center z-10 w-10 h-10 bg-theme  transition-all duration-300 rounded-full;
 }
 
 .menuItem {
-    @apply fixed space-y-16 md:space-y-24 lg:space-y-10 list-none translate-x-[-120%] shadow-xl p-10 w-2/3 h-full text-sm md:text-3xl lg:text-xl hover:text-selected-text pl-10  transition-all duration-300 z-50;
+    @apply fixed space-y-16 md:space-y-24 lg:space-y-10 list-none translate-x-[-120%] shadow-xl p-10 w-1/2 h-full text-sm md:text-3xl lg:text-xl hover:text-selected-text pl-10  transition-all duration-300 z-50;
     transition: all 0.6s cubic-bezier(1,-0.19,0,1.09);
     background-color: #262626ec;
 }
@@ -43,51 +67,47 @@ body{
     @apply transform transition-transform duration-500;
 }
 
-.menuItem li:hover {
-    @apply scale-105;
-}
+
 
 .transX {
-    transform: translateX(-25px);
+    transform: translateX(-10px);
 }
 
-
+/* bg */
+@keyframes rainbow {
+    0% { background-color: rgb(255, 0, 208); }
+    14% { background-color: orange; }
+    28% { background-color: yellow; }
+    42% { background-color: green; }
+    57% { background-color: rgb(255, 255, 255); }
+    71% { background-color: indigo; }
+    85% { background-color: violet; }
+    100% { background-color: rgb(166, 0, 255); } 
+  }
+.circle {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #59C173;
+    animation: rainbow 7s infinite; /* 7秒の間で虹色の変化を繰り返す */ 
+    z-index: -2;
+    
+  }
 
   /*グラデーション  */
   .gradation{
     line-height: 0;
     background: #59C173;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to left, #5c26c158, #a17fe0, #2ecc71);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #5c26c158, #a17fe0, #2ecc71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
 
-
-/* ホログラムアイコン */
-  .hologram {
-    width: 300px;
-    height: 300px;
-    perspective: 1000px;
-    overflow: hidden;
-}
-
-
-.hologram-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: rotateX(0deg) rotateY(0deg);
-    transition: transform 0.5s ease, filter 0.5s ease;
-    filter: brightness(70%) contrast(130%);
-    will-change: transform;
-}
-
-
-.hologram:hover .hologram-image {
-    filter: brightness(100%) contrast(100%);
-    border: solid 1px green;
-}
-
+  /*三角  */
+  
 /* 年表CSS */
 .timeline {
     position: relative;
