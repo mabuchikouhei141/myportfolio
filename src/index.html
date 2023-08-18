@@ -88,7 +88,7 @@
 
        
 <!-- 自己紹介 -->
-<div id="about" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 xl:px-24 w-full">
+<div id="about" class="fade-in container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 xl:px-24 w-full">
     <section class="w-full">
         <h2 class="secondary-title"><i class="fa-regular fa-image-portrait pr-2"></i>自己紹介</h2>
         <p class="section-paragraph">トラックドライバーからWEB専門家へ</p>
@@ -111,7 +111,7 @@
     
 </div>
 <!-- ポートフォリオ -->
-<div id="portfolio" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
+<div id="portfolio" class="fade-in container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
     <section class="w-full">
         <h2 class="secondary-title" id="portfolio-title"><i class="fa-regular fa-browser pr-2"></i>ポートフォリオ</h2>
         <div class="portfolio-animation">
@@ -161,7 +161,7 @@
 </div>
 <!-- スキル一覧 -->
 
-<div id="skills" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
+<div id="skills" class="fade-in container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
     <section class="w-full">
         <h2 class="secondary-title"><i class="fa-regular fa-cubes pr-2"></i>スキルスタック</h2>
         <p class="section-paragraph">私は以下の言語を取り扱ってきました。</p>
@@ -224,7 +224,7 @@
 </div>
 
 <!-- 学習リソース -->
-<div id="resource" class="container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 md:mt-64 w-full">
+<div id="resource" class="fade-in container mt-12 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 md:mt-64 w-full">
     <section class="w-full">
         <h2 class="secondary-title"><i class="fa-regular fa-head-side-gear pr-2"></i>学習リソース</h2>
         <p class="section-paragraph">学習してきたツールやフレームワーク、ライブラリについて</p>
@@ -305,7 +305,7 @@
     </section>
 </div>
 <!-- 経歴 -->
-<div id="resume" class="container mt-28 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 lg:mt-80 w-full">
+<div id="resume" class="fade-in container mt-28 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 lg:mt-80 w-full">
     <section class="w-full">
         <h2 class="secondary-title" id="resume-title"><i class="fa-regular fa-file pr-2"></i>経歴</h2>
         <p class="section-paragraph">生い立ちやどのような仕事をしてきたかについて</p>
@@ -338,7 +338,7 @@
 </section>
 </div>
 <!-- お問い合わせ -->
-<div id="contact" class="container mt-64 mb-64 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
+<div id="contact" class="fade-in container mt-64 mb-64 flex justify-between items-center mx-auto px-8 md:px-14 md:mt-64 lg:px-24 w-full">
     <section class="w-full">
         <h2 class="secondary-title"><i class="fa-regular fa-envelope pr-2"></i>お問い合わせ</h2>
         <p class="section-paragraph">より詳しい経歴や制作物についてはこちらからお問い合わせください。</p>
@@ -405,6 +405,21 @@ function toggleMenu() {
 
 menuToggle.addEventListener("click", toggleMenu);
 menuItem.addEventListener("click", toggleMenu);
+
+//スクロールに応じて要素を出現させる
+document.addEventListener('DOMContentLoaded', function() {
+  const fadeInElements = document.querySelectorAll('.fade-in');
+
+  window.addEventListener('scroll', function() {
+    fadeInElements.forEach(function(element) {
+      const rect = element.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        element.classList.add('visible');
+      }
+    });
+  });
+});
+
 
 //bg
 const container = document.querySelector(".bgAnime");

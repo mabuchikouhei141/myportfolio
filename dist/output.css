@@ -568,6 +568,10 @@ video {
   }
 }
 
+.visible {
+  visibility: visible;
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -598,10 +602,6 @@ video {
 
 .z-10 {
   z-index: 10;
-}
-
-.m-8 {
-  margin: 2rem;
 }
 
 .mx-auto {
@@ -673,14 +673,6 @@ video {
 
 .mt-64 {
   margin-top: 16rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .block {
@@ -889,10 +881,6 @@ video {
   padding: 0.5rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -913,11 +901,6 @@ video {
   padding-right: 2rem;
 }
 
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -936,16 +919,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .pl-1 {
@@ -1065,8 +1038,6 @@ body{
   align-items: center;
   /* アイテムを中央に配置 */
   padding: 5px 15px;
-  border: 1px solid #e0e0e0;
-  /* 薄いボーダー */
   border-radius: 5px;
   background-color: transparent;
   /* 背景を透明に */
@@ -1089,6 +1060,24 @@ body{
   font-size: 12px;
   margin-right: 5px;
   /* テキストとの間隔調整 */
+}
+
+/* 画面に入ると要素をふわっと表示させる */
+
+/* 初期状態を透明に設定 */
+
+.fade-in {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s, visibility 0.5s;
+  /* 0.5秒でフェードインする設定 */
+}
+
+/* スクロール時に要素が画面に入ると、以下のクラスがJavaScriptなどで追加されることを想定 */
+
+.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 .secondary-title {
@@ -1146,6 +1135,11 @@ body{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+}
+
+.menuToggle:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 1280px) {
@@ -1571,11 +1565,6 @@ body{
   .md\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-
-  .md\:py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
   }
 
   .md\:text-left {
